@@ -127,8 +127,8 @@ export default function Home() {
             {onOff ? "Encendido" : "Apagado"}</Button>
           {onOff
             ?
-            <Button bgColor={updateTemp ? '#92B4EC' : '#FF5D5D'} type="button" onClick={handleTemp}>
-                {updateTemp ? "Enfriando" : "Calentando"}
+            <Button bgColor={updateTemp ? '#FF5D5D' : '#92B4EC'} type="button" onClick={handleTemp}>
+                {updateTemp ? "Calentando" : "Enfriando"}
               </Button>
 
             :
