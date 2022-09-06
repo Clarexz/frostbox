@@ -53,7 +53,7 @@ export default function Home() {
             input2B: 0,
             input3A: 1,
             input3B: 0,
-            input4A: 1
+            input4A: 0
           });
           setUpdateTemp(true);
       } else {
@@ -64,7 +64,7 @@ export default function Home() {
             input2B: 1,
             input3A: 0,
             input3B: 1,
-            input4A: 1
+            input4A: 0
           });
           setUpdateTemp(false);
       }
@@ -80,7 +80,7 @@ export default function Home() {
           input2B: 0,
           input3A: 1,
           input3B: 0,
-          input4A: 1
+          input4A: 0
         });
         setOnOff(true);
         setUpdateTemp(true);
@@ -92,7 +92,7 @@ export default function Home() {
           input2B: 0,
           input3A: 0,
           input3B: 0,
-          input4A: 0,
+          input4A: 1,
           input4B: 0
         });
         setOnOff(false);
