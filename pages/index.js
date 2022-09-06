@@ -42,6 +42,21 @@ export default function Home() {
         }); 
     }, []);
 
+    //State para recordar el estado de las variables
+    if(inputs == [1, 0, 1, 0, 1, 0, 0]) {
+      setUpdateTemp(true);
+      setMusicState(true);
+    } else if(inputs == [1, 0, 1, 0, 1, 0, 1]){
+      setUpdateTemp(true);
+      setMusicState(false);
+    } else if (inputs == [0, 1, 0, 1, 0, 1, 0]) {
+      setUpdateTemp(false);
+      setMusicState(true);
+    } else if(inputs == [0, 1, 0, 1, 0, 1, 1]) {
+      setUpdateTemp(false);
+      setMusicState(false);
+    }
+
     //Función para cambiar la temperatura
     const handleTemp = (e) => {
       e.preventDefault();
@@ -103,12 +118,12 @@ export default function Home() {
     e.preventDefault();
     if(musicState == false) {  
         update(ref(db, '/'), {
-          input4B: 1
+          input4B: 0
         });
         setMusicState(true);
     } else {
         update(ref(db, '/'), {
-          input4B: 0
+          input4B: 1
         });
         setMusicState(false);
     }
